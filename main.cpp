@@ -1,3 +1,5 @@
+#include "LikedList.h"
+
 #include <iostream>
 #include <string>
 
@@ -52,19 +54,32 @@ void bootStrap()
 
 int main(int argc, char const *argv[])
 {
-    string line;
-    bootStrap();
-    while (getline(cin, line) && line != ":quit")
-    {
-        if (validCommand(line))
-        {
-            evalCommand(line);
-        }
-        else
-        {
-            cout << "Command not supported. Enter :help for list of supported commands" << endl;
-        }
-        cout << "> ";
-    }
+    // string line;
+    // bootStrap();
+    // while (getline(cin, line) && line != ":quit")
+    // {
+    //     if (validCommand(line))
+    //     {
+    //         evalCommand(line);
+    //     }
+    //     else
+    //     {
+    //         cout << "Command not supported. Enter :help for list of supported commands" << endl;
+    //     }
+    //     cout << "> ";
+    // }
+
+    LinkedList F1;
+
+    F1.insert(1,"Guitar", "Gibson", "IM", "Musical Instrament","player likes");
+    F1.insert(2,"Guitar", "Fender", "IM", "Musical Instrament", "player base");
+    F1.insert(3,"Gaming Monitor", "Samsung", "EMD", "Electronics","Hd monitor");
+    F1.insert(4,"Pokemon: Legends Z-A", "Nintendo", "VG", "Video Game", "Video game for switch");
+    F1.insert(5,"UnderBrush","Nathan & Sons","CG","Chewing Gum","All Natural chewing gum");
+
+    //F1.Traversal();
+    //F1.Find(3);
+    F1.listInvintory("Musical Instrament");
+
     return 0;
 }
