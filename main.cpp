@@ -1,4 +1,5 @@
 #include "LikedList.h"
+#include "FileManager.h"
 
 #include <iostream>
 #include <string>
@@ -70,16 +71,19 @@ int main(int argc, char const *argv[])
     // }
 
     LinkedList F1;
+    File T1;
 
-    F1.insert(1,"Guitar", "Gibson", "IM", "Musical Instrament","player likes");
-    F1.insert(2,"Guitar", "Fender", "IM", "Musical Instrament", "player base");
-    F1.insert(3,"Gaming Monitor", "Samsung", "EMD", "Electronics","Hd monitor");
-    F1.insert(4,"Pokemon: Legends Z-A", "Nintendo", "VG", "Video Game", "Video game for switch");
-    F1.insert(5,"UnderBrush","Nathan & Sons","CG","Chewing Gum","All Natural chewing gum");
+    T1.populateList();
+
+    // F1.insert(1,"Guitar", "Gibson", "IM", "Musical Instrament","player likes");
+    // F1.insert(2,"Guitar", "Fender", "IM", "Musical Instrament", "player base");
+    // F1.insert(3,"Gaming Monitor", "Samsung", "EMD", "Electronics","Hd monitor");
+    // F1.insert(4,"Pokemon: Legends Z-A", "Nintendo", "VG", "Video Game", "Video game for switch");
+    // F1.insert(5,"UnderBrush","Nathan & Sons","CG","Chewing Gum","All Natural chewing gum");
 
     //F1.Traversal();
     //F1.Find(3);
-    F1.listInvintory("Musical Instrament");
+    // F1.listInvintory("Musical Instrament");
 
     return 0;
 }
