@@ -10,7 +10,7 @@ void LinkedList::insert(string id, string Catagory1, string Catagory2, string Ca
     head = insertNode(head, id, Catagory1, Catagory2, Catagory3, Catagory4, Catagory5, Catagory6, Catagory7, info);
 }
 
-Node* LinkedList::deleteNode(Node* node, string id){
+Node* LinkedList::deleteNode(Node* node, string id){//delete does not work, don't need
     int ifTrue = 0;//check if id was valid to delete
 
     if (node == nullptr){
@@ -63,6 +63,9 @@ void LinkedList::searchID(Node* node, string id) const{
             cout << node->info << endl;
             return;
         }
+        else if(node->pNext == nullptr){
+            cout << "Inventory/Product not found" <<endl;
+        }
         searchID(node->pNext, id);
     }
 }
@@ -91,8 +94,35 @@ void LinkedList::listInvintory(string catagory){
 
 bool LinkedList::catagoryTrue(Node* node, string catagory){//fix catagory
     if (node == nullptr) return false;   
-    if (node->Catagory1 == catagory){
+    if (node->Catagory1 == catagory || node->Catagory2 == catagory || node->Catagory3 == catagory || node->Catagory4 == catagory || node->Catagory5 == catagory || node->Catagory6 == catagory || node->Catagory7 == catagory){
         return true;
     }
     return catagoryTrue(node->pNext, catagory);
+}
+
+
+bool LinkedList::testFind(string id){
+    if (findTrue(head,id) == false){
+        return false;
+    }
+    else if (findTrue(head, id) == true){
+        return true;
+    }
+}
+
+bool LinkedList::testInvintory(string catagory){
+    if (catagoryTrue(head, catagory) == false){
+        return false;
+    } 
+    else if (catagoryTrue(head, catagory) == true){
+        return true;
+    }
+}
+
+bool LinkedList::findTrue(Node* node, string id){
+    if (node == nullptr) return false;
+    if (node->inventoryID == id){
+        return true;
+    }
+    return findTrue(node->pNext, id);
 }

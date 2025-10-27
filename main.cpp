@@ -53,9 +53,9 @@ void bootStrap()
     // use proper programming practices
 }
 
-int main(int argc, char const *argv[])
-{
-    // string line;
+// int main(int argc, char const *argv[])
+// {
+//     // string line;
     // bootStrap();
     // while (getline(cin, line) && line != ":quit")
     // {
@@ -70,10 +70,10 @@ int main(int argc, char const *argv[])
     //     cout << "> ";
     // }
 
-    LinkedList F1;
-    File T1;
+    // LinkedList F1;
+    // File T1;
 
-    T1.populateList();
+    // T1.populateList();
 
     // F1.insert(1,"Guitar", "Gibson", "IM", "Musical Instrament","player likes");
     // F1.insert(2,"Guitar", "Fender", "IM", "Musical Instrament", "player base");
@@ -85,5 +85,5 @@ int main(int argc, char const *argv[])
     //F1.Find(3);
     // F1.listInvintory("Musical Instrament");
 
-    return 0;
-}
+//     return 0;
+// }

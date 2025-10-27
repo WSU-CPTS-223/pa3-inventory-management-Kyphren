@@ -19,6 +19,8 @@ class File{
     public:
 
     void populateList();
+    void searchID(string id);
+    void searchCatagory(string catagory);
 
     private:
     LinkedList Q1;

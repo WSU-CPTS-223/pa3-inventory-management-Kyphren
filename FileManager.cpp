@@ -113,3 +113,10 @@ void File::populateList(){
     inFile.close();
 }
 
+void File::searchID(string id){
+    Q1.Find(id);
+}
+
+void File::searchCatagory(string catagory){
+    Q1.listInvintory(catagory);
+}

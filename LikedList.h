@@ -43,6 +43,9 @@ void Traversal();//travers helper function
 void Find(string id);//search helper function
 void listInvintory(string catagory);//search catagory helper function
 
+bool testFind(string id);//for assert testing
+bool testInvintory(string catagory);
+
 private:
 Node* head;//head node
 
@@ -54,5 +57,6 @@ void TraversalNode(Node* node) const;//travers function
 void searchCatagory(Node* node, string catagory);//seach catagories
 
 bool catagoryTrue(Node* node, string catagory);
+bool findTrue(Node* node, string id);
 
 };
