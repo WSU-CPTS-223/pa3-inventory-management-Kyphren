@@ -77,6 +77,7 @@ void LinkedList::Find(string id){
 void LinkedList::searchCatagory(Node* node, string catagory){//fix catagory
     if(catagoryTrue(node, catagory) == false){
         cout << "Invalid Catagory" << endl;
+        return; 
     }
     while (node != nullptr){
     if (catagoryTrue(node, catagory) == true){

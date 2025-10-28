@@ -24,6 +24,8 @@ bool validCommand(string line)
 
 void evalCommand(string line)
 {
+    File T1;
+    T1.populateList();
     if (line == ":help")
     {
         printHelp();
@@ -32,13 +34,25 @@ void evalCommand(string line)
     else if (line.rfind("find", 0) == 0)
     {
         // Look up the appropriate datastructure to find if the inventory exist
-        cout << "YET TO IMPLEMENT!" << endl;
+        //cout << "YET TO IMPLEMENT!" << endl;
+
+        string id;
+        cout << "Enter product ID: ";
+        getline(cin,id);
+        T1.searchID(id);
     }
     // if line starts with listInventory
     else if (line.rfind("listInventory") == 0)
     {
         // Look up the appropriate datastructure to find all inventory belonging to a specific category
-        cout << "YET TO IMPLEMENT!" << endl;
+       // cout << "YET TO IMPLEMENT!" << endl;
+
+       string Invet;
+
+       cout << "Enter Inventory: ";
+       getline(cin,Invet);
+
+       T1.searchCatagory(Invet);
     }
 }
 
@@ -51,29 +65,30 @@ void bootStrap()
     // example: reading from CSV and initializing the data structures
     // Don't dump all code into this single function
     // use proper programming practices
+
 }
 
-// int main(int argc, char const *argv[])
-// {
-//     // string line;
-    // bootStrap();
-    // while (getline(cin, line) && line != ":quit")
-    // {
-    //     if (validCommand(line))
-    //     {
-    //         evalCommand(line);
-    //     }
-    //     else
-    //     {
-    //         cout << "Command not supported. Enter :help for list of supported commands" << endl;
-    //     }
-    //     cout << "> ";
-    // }
+int main(int argc, char const *argv[])
+{
+
+
+
+    string line;
+    bootStrap();
+    while (getline(cin, line) && line != ":quit")
+    {
+        if (validCommand(line))
+        {
+            evalCommand(line);
+        }
+        else
+        {
+            cout << "Command not supported. Enter :help for list of supported commands" << endl;
+        }
+        cout << "> ";
+    }
 
     // LinkedList F1;
-    // File T1;
-
-    // T1.populateList();
 
     // F1.insert(1,"Guitar", "Gibson", "IM", "Musical Instrament","player likes");
     // F1.insert(2,"Guitar", "Fender", "IM", "Musical Instrament", "player base");
@@ -85,5 +100,5 @@ void bootStrap()
     //F1.Find(3);
     // F1.listInvintory("Musical Instrament");
 
-//     return 0;
-// }
+    return 0;
+}

@@ -1,0 +1,17 @@
+{
+    "tasks": [
+        {
+      "label": "C++ Build (WSL)",
+      "type": "shell",
+      "command": "/bin/bash",
+      "args": [
+        "-lc",
+        "g++ -g -Wall -std=c++14 main.cpp LinkedList.cpp FileManager.cpp Test.cpp -o mainexe"
+      ],
+      "options": { "cwd": "${workspaceFolder}" },
+      "group": { "kind": "build", "isDefault": true },
+      "problemMatcher": ["$gcc"]
+    }
+    ],
+    "version": "2.0.0"
+}

@@ -51,7 +51,7 @@ void testAll(){
     cout << "Testing completed: Passed" << endl;
 }
 
-int main(void){
-    testAll();
-    return 0;
-}
+// int main(void){
+//     testAll();
+//     return 0;
+// }
