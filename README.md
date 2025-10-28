@@ -7,3 +7,6 @@ We expect a fully functioninig command line REPL application for an inventory qu
 `make` will compile and execute the skeleton code
 
 Feel free to modify Makefile as you see fit.
+
+When parsing the file, kept the " so it is easier to parse the catagories into a single substring the parse it further with | into multiple catagories. Did parse by ',' so if there was any ASin and brand name they are parsed out of ". used string::npos to tell is | is present, if not then all other catagies are fillded with NA.
+Max catagories set to 7, did notice whhen parsing that the last catagories will repeat, this is a fine income. 
